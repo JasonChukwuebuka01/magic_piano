@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 780px;
+  background: #141414;
+  padding: 35px 40px;
+  border-radius: 20px;
+}
+
+.wrapper header {
+  color: #bbbe64;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .column span {
+  font-weight: 500;
+  margin-right: 5px;
+  font-size: 1.19rem;
+}
+
+.volume-slider input {
+  accent-color: #bbbe64;
+  outline: none;
+}
+
+.keys-checkbox input {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  background: #bbbe64;
+  cursor: pointer;
+  border-radius: 30px;
+  position: relative;
+  outline: none;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #bcbcbc;
+  border-radius: inherit;
+  top: 50%;
+  left: 5px;
+  background: #000;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+}
+
+.piano-keys .keys {
+  list-style: none;
+  color: #a2a2a2;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.piano-keys .white {
+  width: 70px;
+  height: 230px;
+  border-radius: 8px;
+  background: linear-gradient(#fff 98%, #eee 4%);
+  border: 1px solid #000;
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+.piano-keys .black {
+  width: 44px;
+  height: 140px;
+  z-index: 2;
+  background: linear-gradient(#333, #000);
+  border-radius: 0 0 5px 5px;
+  margin: 0 -22px;
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, #000, #434343 100%);
+}
+
+.piano-keys .keys span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #bbbe64;
+}
+
+.piano-keys .keys.hide span {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 200%;
+  }
+
+  .piano-keys .keys {
+    cursor: none;
+  }
+
+  .keys-checkbox input {
+    cursor: none;
+  }
+}

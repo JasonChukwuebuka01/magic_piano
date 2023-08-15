@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Piano</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <header>
+        <h2>MayIcodes Piano</h2>
+        <div class="column volume-slider">
+          <span>Volume</span
+          ><input type="range" min="0" max="1" value="0.5" step="any" />
+        </div>
+
+        <div class="column keys-checkbox">
+          <span>Show keys</span><input type="checkbox" checked />
+        </div>
+      </header>
+
+      <ul class="piano-keys">
+        <li class="keys white" data-key="01"><span>a</span></li>
+        <li class="keys black" data-key="02"><span>w</span></li>
+        <li class="keys white" data-key="03"><span>s</span></li>
+        <li class="keys black" data-key="04"><span>e</span></li>
+        <li class="keys white" data-key="05"><span>d</span></li>
+        <li class="keys white" data-key="06"><span>f</span></li>
+        <li class="keys black" data-key="07"><span>t</span></li>
+        <li class="keys white" data-key="08"><span>g</span></li>
+        <li class="keys black" data-key="09"><span>y</span></li>
+        <li class="keys white" data-key="10"><span>h</span></li>
+        <li class="keys black" data-key="11"><span>u</span></li>
+        <li class="keys white" data-key="12"><span>j</span></li>
+        <li class="keys white" data-key="13"><span>k</span></li>
+        <li class="keys black" data-key="14"><span>o</span></li>
+        <li class="keys white" data-key="15"><span>l</span></li>
+        <li class="keys black" data-key="16"><span>p</span></li>
+        <li class="keys white" data-key="17"><span>;</span></li>
+      </ul>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
